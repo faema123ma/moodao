@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หมูดาว - ตะลุยด่าน</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mali&family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container" id="game-active-screen">
+        <div class="status-bar">
+            <div class="score">SCORE: <span id="score-text">0</span></div>
+            <div class="streak">🔥<span id="streak-text">0</span></div>
+            <div class="lives" id="lives-text"></div>
+            <div class="timer">⏱️ <span id="timer-text">15</span>s</div> 
+        </div>
+        <div class="question-area">
+            <img class="constellation-image" id="constellation-img" src="" alt="Constellation Image">
+            <h2 class="question-text" id="question-text">กลุ่มดาวอะไรเอ่ย?</h2>
+        </div>
+        <div class="answer-area" id="answer-buttons"></div>
+    </div>
+
+    <div class="main-container" id="game-over-screen">
+        <h1 class="title">Game Over!</h1>
+        <p class="subtitle">คะแนนสูงสุด: <span id="high-score-text">0</span></p>
+        <p class="subtitle">คะแนนของคุณคือ: <span id="final-score">0</span></p>
+        <button class="menu-btn" onclick="window.location.reload()">เล่นอีกครั้ง</button>
+        <button class="how-to-play-btn" onclick="window.location.href='index.html'">กลับไปเมนูหลัก</button>
+    </div>
+
+    <audio id="correct-sound" src="sounds/correct.mp3" preload="auto"></audio>
+    <audio id="incorrect-sound" src="sounds/incorrect.mp3" preload="auto"></audio>
+
+    <script src="js/game.js" defer></script>
+</body>
+</html>

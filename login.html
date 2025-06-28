@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หมูดาว - ล็อกอิน</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mali&family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .auth-container {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .auth-container h1 {
+            color: var(--accent-purple);
+        }
+        .auth-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* ลดช่องว่างลงเล็กน้อย */
+        }
+        .auth-form input {
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid var(--accent-purple);
+            background-color: rgba(255,255,255,0.1);
+            color: var(--primary-text);
+            font-size: 1rem;
+        }
+        .auth-form button {
+            background-color: var(--accent-purple);
+            color: var(--dark-text);
+            border: none;
+            border-radius: 12px;
+            padding: 15px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-top: 10px; /* เพิ่มระยะห่างด้านบนปุ่ม */
+        }
+        .auth-form button:hover {
+            background-color: var(--accent-purple-hover);
+        }
+        .toggle-form {
+            color: var(--accent-pink);
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="auth-container" id="auth-container">
+        <div id="login-form">
+            <h1>ยินดีต้อนรับกลับ!</h1>
+            <form class="auth-form" id="login">
+                <input type="text" id="login-username" placeholder="ชื่อผู้ใช้" required>
+                <input type="password" id="login-password" placeholder="รหัสผ่าน" required>
+                <button type="submit">ล็อกอิน</button>
+            </form>
+            <p class="toggle-form" onclick="toggleForms()">ยังไม่มีบัญชี? สมัครสมาชิก</p>
+        </div>
+
+        <div id="register-form" style="display:none;">
+            <h1>สร้างบัญชีใหม่</h1>
+            <form class="auth-form" id="register">
+                <input type="text" id="register-username" placeholder="เลือกชื่อผู้ใช้" required>
+                <input type="password" id="register-password" placeholder="ตั้งรหัสผ่าน" required>
+                <input type="password" id="register-confirm-password" placeholder="ยืนยันรหัสผ่าน" required>
+                <button type="submit">สมัครสมาชิก</button>
+            </form>
+            <p class="toggle-form" onclick="toggleForms()">มีบัญชีอยู่แล้ว? ล็อกอิน</p>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

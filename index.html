@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หมูดาวสอนดาราศาสตร์ - Main Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mali&family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="intro-overlay">
+        <h1>🚀 ยินดีต้อนรับสู่หมูดาว!</h1>
+        <p>เรียนรู้กลุ่มดาวพร้อมหมูอวกาศน้อย</p>
+        <button class="menu-btn">เข้าสู่เกม</button>
+    </div>
+
+    <div class="main-container">
+        <div class="left-section">
+            <div class="character-placeholder"></div>
+            <button class="how-to-play-btn">How to play?</button>
+        </div>
+        <div class="right-section">
+            <div id="user-info" style="display: none; text-align: center; margin-bottom: 20px; background: rgba(0,0,0,0.2); padding: 10px; border-radius: 10px;">
+                <p style="color: var(--primary-text); font-size: 1.1rem; margin: 0;">
+                    ผู้ใช้: <strong id="username-display" style="color: var(--accent-streak);"></strong>
+                </p>
+                <button id="logout-btn" class="how-to-play-btn" style="margin-top: 10px; border-color: var(--accent-pink); color: var(--accent-pink);">ออกจากระบบ</button>
+            </div>
+
+            <h1 class="title">หมูดาว</h1>
+            <p class="subtitle">star pig cosmic game</p>
+            <div class="menu-buttons">
+                <button class="menu-btn" onclick="window.location.href='exercise.html'">ตะลุยด่าน</button>
+                <button class="menu-btn" id="learn-btn">เรียนรู้</button>
+                <button class="menu-btn" onclick="window.location.href='stats.html'">ดูสถิติ</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="bg-music" src="sounds/bg-music.mp3" loop autoplay></audio>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>
